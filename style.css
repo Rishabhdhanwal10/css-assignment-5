@@ -1,0 +1,291 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: greenyellow;
+    overflow-x: hidden;
+}
+h1{
+    text-align: center;
+}
+.container{
+    width: 45%;
+    margin: 0px auto;
+}
+.container>div{
+    width: 100%;
+    margin-top: 82px;
+    display: flex;
+    justify-content: space-between;
+}
+.first{
+    width: 120px;
+    height: 120px;
+    background-color: royalblue;
+    /*transition: transform 5s ease-in;
+    transform: skewX(30deg);*/
+    animation: first-animation 5s ease-in infinite forwards;
+}
+@keyframes first-animation {
+    0%{
+        transform: skewX(0deg);
+    }
+    25%{
+        transform: skewX(30deg);
+    }
+    75%{
+        transform: skewX(-30deg);
+    }
+    100%{
+        transform: skewX(0deg);
+    }
+}
+
+.second{
+    width: 120px;
+    height: 120px;
+    background-color: seagreen;
+    animation: second-animation 5s ease-in infinite forwards;
+}
+@keyframes second-animation {
+    0%{
+        transform: skewY(0deg);
+    }
+    25%{
+        transform: skewY(30deg);
+    }
+    75%{
+        transform: skewY(-30deg);
+    }
+    100%{
+        transform: skewY(0deg);
+    }
+}
+
+.third{
+    width: 120px;
+    height: 120px;
+    background-color:tomato;
+    animation: third-animation 3s ease-out infinite forwards;
+}
+@keyframes third-animation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.fourth{
+    width: 120px;
+    height: 120px;
+    background-color:forestgreen;
+    animation: fourth-animation 3s linear infinite forwards;
+}
+@keyframes fourth-animation {
+    50%{
+        transform: rotateX(60deg);
+    }
+}
+
+.fifth{
+    width: 120px;
+    height: 120px;
+    background-color:maroon;
+    animation: fifth-animation 3s linear infinite forwards;
+}
+@keyframes fifth-animation {
+    50%{
+        transform:rotateY(60deg);
+    }
+}
+
+.sixth{
+    width: 120px;
+    height: 120px;
+    background-color:mediumblue;
+    animation: sixth-animation 3s linear infinite forwards;
+}
+@keyframes sixth-animation {
+    50%{
+        transform: rotateZ(90deg);
+    }
+}
+
+.link{
+    text-align: center;
+    margin: 30px 0px;
+}
+.link>a{
+    font-size: 28px;
+}
+
+/******************* CSS For PAGE 3 *********************/
+
+.anim{
+    width: 99%;
+    height: 100vh;
+    margin: 0px auto;
+    border-top: 6px solid white;
+    border-left: 6px solid orange;
+    border-right: 6px solid green;
+}
+.sky{
+    width: 100%;
+    height: 65%;
+    background: url('./images/sky.jpg');
+    position: relative;
+}
+
+.sun{
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    /*background:url('./images/sun.png');
+    background-position: center;
+    background-size: cover;*/
+    animation: animated-sun 120s linear infinite;
+}
+@keyframes animated-sun {
+    100%{
+        transform: translateX(-1100px);
+    }
+}
+
+.buildings{
+    width: 250%;
+    height: 50%;
+    background: url('./images/city.png');
+    position: absolute;
+    bottom: 0%;
+    /*background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite;
+    animation-delay: 10s;*/
+    animation: animated-building 15s linear infinite;
+}
+@keyframes animated-building {
+    100%{
+        transform: translateX(-1500px);
+    }
+}
+
+.road{
+    width: 100%;
+    height: 35%;
+    background: url('./images/road.jpg');
+    animation: animatedBackground 20s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100% 0;
+    }
+}
+
+.car{
+    width: 30%;
+    height: 175px;
+    margin: 0px auto;
+    background: url('./images/car.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    bottom: 35%;
+}
+.flag{
+    position: absolute;
+    right: 4%;
+    top: 7%;
+}
+.wheel{
+    position: absolute;
+    width: 17%;
+    height: 75px;
+    background: url('./images/wheel.png');
+    background-position: center;
+    background-size: cover;
+    bottom: 4.5%;
+    /*animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;*/
+    animation: rotation 2s linear infinite;
+}
+.a{
+    left: 9.5%;
+}
+.b{
+    right: 12.5%;
+}
+
+@keyframes rotation {
+    /*100%{
+        transform: rotate(360deg);
+    }*/
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.sky>h1{
+    margin: 0px;
+    padding-top: 12px;
+    font-size: 38px;
+    word-spacing: 6px;
+}
+
+/******************** CSS FOR PAGE 2 *********************/
+
+.page-2{
+    width: 100%;
+    text-align: center;
+}
+.page-2>ol{
+    display: inline-block;
+    padding-left: 0px;
+}
+.page-2>ol>li{
+    width: 120px;
+    height: 120px;
+    background-color: green;
+    margin: 16px 0px;
+}
+.a{
+    transition: width 2s;
+}
+.a:hover , .c:hover , .d:hover , .e:hover , .f:hover , .g:hover{
+    width: 300px;
+}
+
+.b{
+    transition: width 2s linear, height 2s linear .5s;
+    
+}
+.b:hover{
+    width: 300px;
+    height: 300px;
+}
+
+.c{
+    transition: width 2s linear;
+}
+.d{
+    transition: width 2s ease;
+}
+.e{
+    transition: width 2s ease-in;
+}
+.f{
+    transition: width 2s ease-out;
+}
+.g{
+    transition: width 2s ease-in-out;
+}
+
+a{
+    display: block;
+    margin: 12px 0px;
+    font-size: 18px;
+}
